@@ -49,7 +49,10 @@ const ProjectIntro = props => {
       <Paper>
         <div className={classes.ProjectFrontContainer}>
           <label className={classes.lblTitle}>소개</label>
-          <a href={project.introduction.link}>PlayStore Link</a>
+          {project.introduction.link !== "" && (
+            <a href={project.introduction.link}>Project Link</a>
+          )}
+
           <div className={classes.itemDiv}>
             <div>
               {project.introduction.memo.map((item, index) => {
@@ -93,14 +96,17 @@ const ProjectIntro = props => {
         <div className={classes.ProjectBackendContainer}>
           <label className={classes.lblTitle}>BACKEND</label>{" "}
           <div>
-            <label className={classes.lblLang}># Ubuntu</label>
-            <label className={classes.lblLang}># Eclipse</label>
-            <label className={classes.lblLang}># Java Sevelet</label>
-            <label className={classes.lblLang}># MySql</label>
-          </div>{" "}
+            {project.backend.tag.map((item, index) => {
+              return (
+                <label key={index} className={classes.lblLang}>
+                  {item}
+                </label>
+              );
+            })}
+          </div>
           <div className={classes.itemDiv}>
             <label style={{ fontSize: 20 }}>1. 기간</label>
-            <label style={{ padding: 15 }}>1개월</label>
+            <label style={{ padding: 15 }}>{project.backend.period}</label>
             <label style={{ fontSize: 20 }}>2. 개발 내용</label>
             <div
               style={{
@@ -109,9 +115,9 @@ const ProjectIntro = props => {
                 flexDirection: "column"
               }}
             >
-              <label>{`서버 개발자 퇴사 후 인수`}</label>
-              <label>{`REST API Server 유지보수 및 추가개발`}</label>
-              <label>{`MVC 패턴 활용`}</label>
+              {project.backend.memo.map((item, index) => {
+                return <label key={index}>{item}</label>;
+              })}
             </div>
           </div>
         </div>

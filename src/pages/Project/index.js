@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ProjectIcon from "../../components/Project/ProjectIcon";
 import Icon01 from "../../assets/images/p_icon01.png";
@@ -50,6 +50,7 @@ const useStyles = makeStyles(theme => ({
 }));
 const Project = () => {
   const classes = useStyles();
+  const [projectNum, setProjectNum] = useState(0);
   const project = [
     {
       introduction: {
@@ -66,7 +67,7 @@ const Project = () => {
       },
       front: {
         tag: [`# MacOS`, `# VSCode`, `# ReactNative`, `# Styled`],
-        period: "5개월",
+        period: "5개월 + @",
         memo: [
           `기획 분석 후 개발 총 담당`,
           `REST API Server 와 axios API 통신으로 데이터 수신 및 가공`,
@@ -74,20 +75,64 @@ const Project = () => {
           `교대 근무 월별 근무 현황 체크 및 메모 기능`,
           `전자 문서 기능 (Redux를 이용한 state 관리)`
         ]
+      },
+      backend: {
+        tag: [
+          `# Ubuntu`,
+          `# Eclipse`,
+          `# Java Sevelet`,
+          `# Tomcat 8.5`,
+          `# MySql`
+        ],
+        period: "1개월 + @",
+        memo: [
+          `서버 개발자 퇴사 후 인수`,
+          `REST API Server 유지보수 및 추가개발`,
+          `MVC 패턴 활용`
+        ]
+      }
+    },
+    {
+      introduction: {
+        link: "https://www.linepayroll.com/",
+        memo: [
+          `급여박사2 앱과 전자문서를 공유하는 웹 (+ 홈페이지 리뉴얼 작업 예정)`,
+          `1. 업무요청, 전자문서, 전자 결재 기능`,
+          `    - 불필요한 페이퍼 낭비 방지, 추가 WEB 개발로 손쉽게 이용 가능`
+        ]
+      },
+      front: {
+        tag: [`# MacOS`, `# VSCode`, `# React`, `# NextJs`, `# Html`, `# CSS`],
+        period: "1개월 + @",
+        memo: [
+          `개발 총 담당`,
+          `REST API Server 와 axios API 통신으로 데이터 수신 및 가공`,
+          `React로 최초 테스트용 사이트 next.js 로 리뉴얼 중`
+        ]
+      },
+      backend: {
+        tag: [`# MacOS`, `# VSCode`, `# NodeJs`, `# Express`, `# nginX`],
+        period: "1개월 + @",
+        memo: [
+          `Java -> NodeJs 로 이전 작접 중`,
+          `REST API Server 개발 및 유지보수`,
+          `nginX letsencrypt https 연결`,
+          `passport session 관리`
+        ]
       }
     }
   ];
   return (
     <div className={classes.ProjectContainer}>
       <div className={classes.ProjectIconContainer}>
-        <Button>
+        <Button onClick={() => setProjectNum(0)}>
           <ProjectIcon iconImg={Icon01} iconTitle="급여박사2" />
         </Button>
-        <Button>
+        <Button onClick={() => setProjectNum(1)}>
           <ProjectIcon iconImg={Icon02} iconTitle="그룹웨어" />
         </Button>
       </div>
-      <P01 project={project[0]} />
+      <P01 project={project[projectNum]} />
     </div>
   );
 };
