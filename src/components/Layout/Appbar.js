@@ -26,8 +26,8 @@ const Appbar = props => {
           <Link to="/" className={classes.appbarHome}>
             JongWoo. Kim
           </Link>
-          <Link to="/Profile" className={classes.appbarItem}>
-            프로필
+          <Link to="/Story" className={classes.appbarItem}>
+            스토리
           </Link>
           <Link to="/Project" className={classes.appbarItem}>
             프로젝트

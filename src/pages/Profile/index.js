@@ -5,6 +5,7 @@ import ProfileInfo from "../../components/Profile/ProfileInfo";
 import ProfileAcademic from "../../components/Profile/ProfileAcademic";
 import ProfileCareer from "../../components/Profile/ProfileCareer";
 import ProfileSkill from "../../components/Profile/ProfileSkill";
+import ProfileCertificate from "../../components/Profile/ProfileCertificate";
 
 const useStyles = makeStyles(theme => ({
   ProfileContainer: {
@@ -46,6 +47,9 @@ const Profile = () => {
       </Paper>
       <Paper>
         <ProfileSkill />
+      </Paper>
+      <Paper>
+        <ProfileCertificate />
       </Paper>
     </div>
   );

@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import ProjectIcon from "../../components/Project/ProjectIcon";
 import Icon01 from "../../assets/images/p_icon01.png";
 import Icon02 from "../../assets/images/p_icon02.png";
+import Icon03 from "../../assets/images/p_icon03.png";
 import { Button } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -50,7 +51,7 @@ const useStyles = makeStyles(theme => ({
 }));
 const Project = () => {
   const classes = useStyles();
-  const [projectNum, setProjectNum] = useState(0);
+  const [projectNum, setProjectNum] = useState(2);
   const project = [
     {
       introduction: {
@@ -107,6 +108,7 @@ const Project = () => {
         memo: [
           `개발 총 담당`,
           `REST API Server 와 axios API 통신으로 데이터 수신 및 가공`,
+          `Redux, Redux-Saga 사용`,
           `React로 최초 테스트용 사이트 next.js 로 리뉴얼 중`
         ]
       },
@@ -116,8 +118,34 @@ const Project = () => {
         memo: [
           `Java -> NodeJs 로 이전 작접 중`,
           `REST API Server 개발 및 유지보수`,
+          `promise 사용으로 동기적으로 쿼리 실행`,
           `nginX letsencrypt https 연결`,
           `passport session 관리`
+        ]
+      }
+    },
+    {
+      introduction: {
+        link: "",
+        memo: [
+          `장비 생산성 증가를 위한 TFT 회의 자료용 프로그램`,
+          `10개이상의 Table을 조인하여 장비별, 기간별 Data 집계 chart`
+        ]
+      },
+      front: {
+        tag: [`# Windows10`, `# VisualStudio`, `# C#`, `# chartFx`],
+        period: "2개월",
+        memo: [
+          `장비 데이터 기간별, 장비별 반도체 생산량 분석 chart 개발`,
+          `chart, data -> excel 전환`
+        ]
+      },
+      backend: {
+        tag: [`# Oracle`, `# Orange`],
+        period: "2개월",
+        memo: [
+          `천만, 억 단위의 실시간 장비 Data를 10개 이상의 Table Join으로 데이터 조합`,
+          `Oracle explain 분석 후 최대한 빠른 로직 구현`
         ]
       }
     }
@@ -125,6 +153,9 @@ const Project = () => {
   return (
     <div className={classes.ProjectContainer}>
       <div className={classes.ProjectIconContainer}>
+        <Button onClick={() => setProjectNum(2)}>
+          <ProjectIcon iconImg={Icon03} iconTitle="매그나칩 반도체" />
+        </Button>
         <Button onClick={() => setProjectNum(0)}>
           <ProjectIcon iconImg={Icon01} iconTitle="급여박사2" />
         </Button>

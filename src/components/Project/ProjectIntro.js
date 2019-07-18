@@ -86,7 +86,7 @@ const ProjectIntro = props => {
               }}
             >
               {project.front.memo.map((item, index) => {
-                return <label key={index}>{item}</label>;
+                return <li key={index}>{item}</li>;
               })}
             </div>
           </div>
@@ -116,7 +116,7 @@ const ProjectIntro = props => {
               }}
             >
               {project.backend.memo.map((item, index) => {
-                return <label key={index}>{item}</label>;
+                return <li key={index}>{item}</li>;
               })}
             </div>
           </div>
