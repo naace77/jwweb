@@ -32,6 +32,9 @@ const Appbar = props => {
           <Link to="/Project" className={classes.appbarItem}>
             프로젝트
           </Link>
+          <Link to="/Personality" className={classes.appbarItem}>
+            인적성
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

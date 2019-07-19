@@ -4,6 +4,7 @@ import Layout from "./components/Layout/MainLayout";
 import Main from "./pages/Main";
 import Profile from "./pages/Profile";
 import Project from "./pages/Project";
+import Personality from "./pages/Personality";
 const App = () => {
   return (
     <Router>
@@ -12,6 +13,7 @@ const App = () => {
           <Route exact path="/Story" component={Main} />
           <Route exact path="/" component={Profile} />
           <Route exact path="/Project" component={Project} />
+          <Route exact path="/Personality" component={Personality} />
         </Switch>
       </Layout>
     </Router>
