@@ -32,7 +32,7 @@ const Profile = () => {
       <Paper>
         <div className={classes.profileTitleDiv}>
           <label className={classes.profileTitleTxt}>
-            무한한 가능성을 가진 웹, 앱 풀스택 개발자 !
+            개발을 즐기는 웹, 앱 풀스택 개발자 !
           </label>
         </div>
       </Paper>

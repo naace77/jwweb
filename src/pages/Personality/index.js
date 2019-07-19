@@ -13,12 +13,12 @@ const Personality = () => {
   const classes = useStyles();
   const [seletedPage, setSelectedPage] = useState(0);
   const insung = [
-    require("../../assets/images/i_01.png"),
     require("../../assets/images/i_02.png"),
     require("../../assets/images/i_03.png"),
     require("../../assets/images/i_04.png"),
     require("../../assets/images/i_05.png"),
-    require("../../assets/images/i_06.png")
+    require("../../assets/images/i_06.png"),
+    require("../../assets/images/i_01.png")
   ];
   const juksung = [
     require("../../assets/images/j_01.png"),
