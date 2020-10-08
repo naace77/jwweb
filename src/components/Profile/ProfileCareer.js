@@ -50,7 +50,13 @@ const ProfileCareer = () => {
 
   const rows = [
     createData(
-      "2018.08 ~ 재직중",
+      "2019.11 ~ 재직중",
+      "파고다아카데미",
+      "개발팀 / Manager / 웹개발",
+      "3450만원"
+    ),
+    createData(
+      "2018.08 ~ 2019.08",
       "라인페이롤서비스",
       "전산팀 / 사원 / 앱개발",
       "3200만원"
@@ -60,7 +66,8 @@ const ProfileCareer = () => {
       "디엘정보기술",
       "솔루션사업부 / 사원 / 유지보수",
       "2550만원"
-    )
+    ),
+    
   ];
   const Today = new Date();
   const ExDay = new Date(2017, 11, 27);
