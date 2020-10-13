@@ -36,7 +36,7 @@ const ProfileInfo = () => {
           <label>010-8360-3806</label>
         </div>
         <div className={classes.profileTopRightItem}>
-          <label>(28523) 충북 청주시 상당구 용담동 165-8(401호)</label>
+          <label>경기도 광주시 태제로 130 오포금강KCC 102-403</label>
         </div>
       </div>
     </div>
